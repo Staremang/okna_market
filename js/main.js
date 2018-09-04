@@ -13,5 +13,10 @@ $(document).ready(function () {
 		slidesToShow: 3,
 //		slidesToScroll: 3
 	});
+	$('.colors-slider').slick({
+		infinite: true,
+		slidesToShow: 5,
+//		slidesToScroll: 3
+	});
 
 })

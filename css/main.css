@@ -3050,6 +3050,66 @@ img {
   font-weight: 300;
   text-align: center;
 }
+.colors-section {
+  text-align: center;
+}
+.colors-section__subtitle {
+  font: 500 30px/35px "Museo Cyrl", sans-serif;
+  color: #066781;
+}
+.colors-section__text {
+  font-size: 24px;
+  font-weight: 500;
+}
+.colors-section__more {
+  font-size: 24px;
+  font-weight: 500;
+  font-family: "Museo Cyrl", sans-serif;
+  color: #066781;
+  border-bottom: 1px dashed #066781;
+}
+.colors-slider {
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.colors-slider__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.colors-slider__img {
+  width: 136px;
+  height: 136px;
+  border-radius: 50%;
+  background-color: black;
+  margin-bottom: 30px;
+}
+.colors-slider__text {
+  font-size: 18px;
+  font-weight: 300;
+}
+.equipment-section {
+  background: url(../img/blue-bg.png) center no-repeat;
+  height: 499px;
+  padding-top: 50px;
+}
+.equipment-section__title {
+  font: 500 40px/50px "Museo Cyrl", sans-serif;
+  text-shadow: 0px 6px 8px rgba(0, 83, 88, 0.34);
+  margin: 0;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 14px;
+}
 /*
  * Преимущества
  */
