@@ -174,10 +174,29 @@ img {
 		border-radius: 40px;
 		padding: 14px 20px 11px;
 		text-transform: uppercase;
+		
+		box-shadow: 0px 11px 24px 0px rgba(252, 70, 40, 0.37);
+		
 		&:hover {
 			background-image: linear-gradient(to bottom, @red 0%, #db0600 100%);
 		}
 	}
+	&_orange {
+		background: #fbdd01;
+		font-size: 22px;
+		font-weight: bold;
+		color: black;
+		border-radius: 40px;
+		padding: 14px 20px 11px;
+		text-transform: uppercase;
+		
+		box-shadow: 0px 11px 24px 0px rgba(3, 140, 148, 0.37);
+		
+		&:hover {
+			background-image: linear-gradient(to bottom, #fbdd01 0%, #eace05 100%);
+		}
+	}
+	
 	
 	&_block {
 		display: block;
@@ -604,6 +623,10 @@ img {
 		margin-bottom: 30px;
 	}
 }
+
+
+
+
 .price-hero-item {
 	width: 360px;
 	height: 417px;
@@ -695,27 +718,325 @@ img {
 	
 }
 
+.find-price {
+	background: linear-gradient(to bottom, #fff201 0%, #ffcf27 50%);
+	padding: 50px 0 45px;
+	margin-top: 50px;
+	&__subtitle {
+		font-size: 18px;
+		text-transform: uppercase;
+	}
+	&__form {
+		display: flex;
+		justify-content: center;
+		margin-top: 30px;
+		margin-bottom: 35px;
+	}
+	&__input {
+		width: 218px;
+		
+		
+		background: white;
+		border: 0;
+		border-radius: 26px;
+		font-family: 'Gotham Pro', sans-serif;
+
+		padding: 15px 15px 15px 63px;
+		box-shadow: none;
+		font-size: 16px;
+		
+		transition: all .3s ease;
+		outline: none;
+		color: black;
+		height: 50px;
+		margin-right: 21px;
+		
+		box-shadow: 0px 11px 24px 0px rgba(159, 137, 14, 0.37);
+		
+	}
+	&__btn {
+		width: 250px;
+		height: 50px;
+	}
+	&__time {
+		font-size: 20px;
+		font-weight: 300;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	&__note {
+		font-size: 12px;
+		font-weight: 300;
+		text-align: center;
+	}
+	
+}
+
+/*
+ * Преимущества
+ */
+.advantages {
+	&__item {
+		height: 299px;
+	}
+	&__ {
+		
+	}
+}
+
+/*
+ * Определились с выбором?
+ */
 .section-call-me {
 	background: url(../img/section-call-me-bg.jpg) center no-repeat;
 	background-size: auto 100%;
-	height: 540px;
 	margin-bottom: 50px;
-	
+	&__text-block {
+		
+	}
+	&__title {
+		
+		
+		font: 500 40px/50px @font-museo;
+		text-transform: uppercase;
+		margin-bottom: 45px;
+	}
+	&__text {
+		font: 500 30px/40px @font-museo;
+		margin-bottom: 110px;
+	}
 	&__form {
 		text-align: center;
 		border-radius: 10px;
 		background: white;
 		box-shadow: 0px 0px 29px 0px rgba(1, 1, 1, 0.1);
-		position: absolute;
+//		position: absolute;
 		width: 390px;
 		height: 436px;
-		padding: 30px 33px;
+		padding: 0 33px;
+		margin-left: 40px;
 	}
 	&__form-title {
 		font-size: 30px;
-		margin-bottom: 20px;
+		margin: 35px 0 30px;
 	}
 	&__btn {
 		margin-top: 28px;
+	}
+	&__note {
+		font-size: 11px;
+		font-weight: 300;
+		color: #919191;
+		margin-top: 15px;
+		> a {
+			color: inherit;
+		}
+	}
+	&__container {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		height: 540px;
+	}
+}
+
+
+
+/*
+ * Оконные профили
+ */
+.window-profiles {
+	&__item {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+//		justify-content: center;
+		align-items: center;
+		margin-top: 50px;
+	}
+	&__img {
+		border-radius: 50%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		
+		box-shadow: 0px 0px 29px 0px rgba(1, 1, 1, 0.19);
+		width: 300px;
+		height: 300px;
+
+	}
+	&__name {
+		border-radius: 10px;
+		background-color: #17b6c0;
+		height: 45px;
+		width: 229px;
+		padding-top: 8px;
+		
+		font-size: 28px;
+		color: white;
+		font-weight: bold;
+		text-transform: uppercase;
+		line-height: 1.2;
+		margin-bottom: 27px;
+		margin-top: 25px;
+	}
+	&__text {
+		font-size: 20px;
+		margin-top: 6px;
+		margin-bottom: 10px;
+	}
+	&__price {
+		font-size: 30px;
+		color: @red;
+		font-weight: bold;
+	}
+}
+
+.colorful-crap {
+	height: 886px;
+	background: url(../img/blue-bg.png) bottom no-repeat, linear-gradient(to bottom, #fff201 0%, #ffcf27 50%);
+	padding-top: 60px;
+}
+
+
+/*
+ * Не нужно переплачивать
+ */
+.no-overpayments {
+	margin-top: 50px;
+	&__img {
+		height: 140px;
+	}
+	&__text {
+		font: 500 30px/30px @font-museo;
+		color: black;
+		text-align: left;
+		text-shadow: 3.392px 2.12px 0px rgba(1, 1, 1, 0.23);
+	}
+}
+
+
+/*
+ * Купите окна по низкой цене (с таймером)
+ */
+.timer {
+	margin-top: 115px;
+
+	&__title {
+		font: 500 40px/50px @font-museo;
+		
+		text-shadow: 0px 6px 8px rgba(0, 83, 88, 0.34);
+		text-align: center;
+		margin: 0;
+		color: white;
+		text-transform: uppercase;
+		text-align: center;
+		margin-bottom: 14px;
+	}
+	&__subtitle {
+		font-size: 24px;
+		text-transform: uppercase;
+		text-align: center;
+		margin-bottom: 19px;
+	}
+	&__note {
+		font-size: 11px;
+		color: white;
+		text-align: center;
+		margin-top: 12px;
+		> a {
+			color: inherit;
+		}
+	}
+}
+.timer-val {
+	height: 180px;
+	margin-bottom: 16px;
+}
+
+
+
+
+
+/*
+ * Отзывы
+ */
+.reviews-section {
+	background: url(../img/reviews-bg.png) top no-repeat;
+	padding-top: 70px;
+	&__title {
+		font: 500 40px/50px @font-museo;
+		text-transform: uppercase;
+		color: white;
+		text-align: center;
+		margin-top: 0;
+		margin-bottom: 61px;
+	}
+}
+.reviews {
+	text-align: center;
+	&__item {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+	&__img {
+		height: 341px;
+	}
+	&__tooltip {
+		background-image: linear-gradient(0, #ffcf27 0%, #fff201 100%);
+		width: 568px;
+		height: 100px;
+		border-radius: 50px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 60px;
+		margin-top: -50px;
+	}
+	&__name {
+		font-size: 26px;
+		font-weight: 500;
+	}
+	&__city {
+		font-size: 24px;
+	}
+	&__body {
+		position: relative;
+		width: 736px;
+//		margin-left: auto;
+//		margin-right: auto;
+		&:before {
+			content: '';
+			position: absolute;
+			background: url(../img/quotes-1.png) center no-repeat;
+			background-size: contain;
+			width: 37px;
+			height: 24px;
+			left: -48px;
+			top: 0;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			background: url(../img/quotes-1.png) center no-repeat;
+			background-size: contain;
+			width: 37px;
+			height: 24px;
+			right: -48px;
+			bottom: 0;
+		}
+	}
+	&__title {
+		font-size: 24px;
+		font-weight: 500;
+		margin-bottom: 10px;
+		margin-top: 0;
+	}
+	&__text {
+		font-size: 22px;
+		margin-bottom: 0;
+		margin-top: 0;
 	}
 }
