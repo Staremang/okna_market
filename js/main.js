@@ -25,6 +25,12 @@ $(document).ready(function () {
 	});
 	
 	
+	$('.gallery-slider').on('init', function (e, s) {
+		var activeBlock = s.$slider.find('.slick-center');
+		
+		$('.gallery__name').html(activeBlock.data('name'))
+		$('.gallery__value').html(activeBlock.data('price'))
+	})
 	$('.gallery-slider').slick({
 		infinite: true,
 //		slidesToShow: 3,
@@ -32,6 +38,16 @@ $(document).ready(function () {
 		centerPadding: '60px',
 		variableWidth: true
 	});
+	$('.gallery-slider').on('afterChange', function (e, s) {
+		var activeBlock = s.$slider.find('.slick-center');
+		
+		$('.gallery__name').html(activeBlock.data('name'))
+		$('.gallery__value').html(activeBlock.data('price'))
+	})
+	
+	
+	
+	
 	$('.reviews').slick({
 		infinite: true,
 		slidesToShow: 1,
