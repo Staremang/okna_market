@@ -32,9 +32,23 @@ $(document).ready(function () {
 		centerPadding: '60px',
 		variableWidth: true
 	});
+	$('.reviews').slick({
+		infinite: true,
+		slidesToShow: 1,
+		rtl: false
+	});
+	$('.reviews__btn-next').click(function () {
+		$('.reviews').slick("slickNext");
+	})
+	$('.reviews__btn-prev').click(function () {
+		$('.reviews').slick("slickPrev");
+	})
+	
 	
 	var t = $('.timer-val').FlipClock({
-		countdown: true
+		countdown: true,
+		defaultLanguage: 'ru-ru',
+		language: 'ru-ru',
 	});
 //	var t = $('.timer-val').FlipClock(86400, {
 //		countdown: true,

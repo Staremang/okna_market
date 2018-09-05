@@ -207,6 +207,8 @@ img {
 
 
 .header {
+	z-index: 1;
+	position: relative;
 	&__top {
 		background: white;
 	}
@@ -373,7 +375,7 @@ img {
 	&__plate {
 		border: 5px solid #ffdd1c;
 		border-radius: 24px;
-		background-image: linear-gradient( 109deg, rgb(238,238,238) 50%, rgb(255,255,255) 51%);
+		background-image: linear-gradient(-17deg, rgb(238,238,238) 50%, rgb(255,255,255) 51%);
 		text-align: center;
 //		display: flex;
 		position: absolute;
@@ -415,9 +417,11 @@ img {
 		
 		font: 500 30px/35px @font-museo;
 		position: relative;
+		
+		width: 190px;
 		&:before {
 			content: '';
-			width: 160px;
+			width: 180px;
 			height: 1px;
 			background: @red;
 			position: absolute;
@@ -1316,6 +1320,7 @@ img {
 		justify-content: center;
 		margin-bottom: 60px;
 		margin-top: -54px;
+		position: relative;
 	}
 	&__name {
 		font-size: 26px;
@@ -1361,6 +1366,37 @@ img {
 		margin-bottom: 0;
 		margin-top: 0;
 	}
+	&__btn-prev {
+		.btn-normalize();
+		
+		width: 44px;
+		height: 44px;
+		display: block;
+		position: absolute;
+		background: url(../img/arrow-3-left.png) center no-repeat;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 19px;
+		&:hover {
+			background: url(../img/arrow-3-left-h.png) center no-repeat;
+		}
+	}
+	&__btn-next {
+		.btn-normalize();
+		
+		width: 44px;
+		height: 44px;
+		display: block;
+		position: absolute;
+		background: url(../img/arrow-3-right.png) center no-repeat;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 19px;
+		
+		&:hover {
+			background: url(../img/arrow-3-right-h.png) center no-repeat;
+		}
+	}
 }
 
 
@@ -1395,6 +1431,16 @@ img {
 		display: flex;
 		align-items: center;
 		margin: 0 -82px;
+		
+		&.slick-center {
+			z-index: 2;
+			position: relative;
+		}
+		&.slick-center + .gallery-slider__item {
+			
+			z-index: 1;
+			position: relative;
+		}
 	}
 	&__img {
 		background-color: black;
@@ -1410,6 +1456,24 @@ img {
 			transform: scale(358/290);
 
 		}
+		
+	}
+	
+	
+	
+	.slick-arrow {
+		width: 64px;
+		height: 64px;
+		top: 135px;
+	}
+	.slick-prev {
+		left: -82px;
+		background-image: url(../img/arrow-2-left.png);
+	}
+	.slick-next {
+		right: -82px;
+		background-image: url(../img/arrow-2-right.png);
+		
 	}
 }
 .call-me-bottom {
@@ -1565,7 +1629,7 @@ img {
 }
 
 
-.popup-thanks {
+.popup-thanks { 
 	.p();
 	
 	border-radius: 10px;
@@ -1675,9 +1739,6 @@ img {
 	box-shadow: 0px 0px 12px 0px rgba(1, 1, 1, 0.45);
 	width: 473px;
 	height: 623px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 	text-align: center;
 	background-image: url(../img/small-popup-bg.jpg);
 	background-repeat: no-repeat;

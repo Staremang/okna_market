@@ -3646,6 +3646,10 @@ img {
   display: block;
   width: 100%;
 }
+.header {
+  z-index: 1;
+  position: relative;
+}
 .header__top {
   background: white;
 }
@@ -3816,9 +3820,9 @@ img {
 .hero__plate {
   border: 5px solid #ffdd1c;
   border-radius: 24px;
-  background-image: -webkit-linear-gradient(341deg, #eeeeee 50%, #ffffff 51%);
-  background-image: -o-linear-gradient(341deg, #eeeeee 50%, #ffffff 51%);
-  background-image: linear-gradient(109deg, #eeeeee 50%, #ffffff 51%);
+  background-image: -webkit-linear-gradient(107deg, #eeeeee 50%, #ffffff 51%);
+  background-image: -o-linear-gradient(107deg, #eeeeee 50%, #ffffff 51%);
+  background-image: linear-gradient(-17deg, #eeeeee 50%, #ffffff 51%);
   text-align: center;
   position: absolute;
   font: 500 23px/23px "Museo Cyrl", sans-serif;
@@ -3857,10 +3861,11 @@ img {
 .hero__old-price {
   font: 500 30px/35px "Museo Cyrl", sans-serif;
   position: relative;
+  width: 190px;
 }
 .hero__old-price:before {
   content: '';
-  width: 160px;
+  width: 180px;
   height: 1px;
   background: #f92401;
   position: absolute;
@@ -4788,6 +4793,7 @@ img {
   justify-content: center;
   margin-bottom: 60px;
   margin-top: -54px;
+  position: relative;
 }
 .reviews__name {
   font-size: 26px;
@@ -4831,6 +4837,68 @@ img {
   margin-bottom: 0;
   margin-top: 0;
 }
+.reviews__btn-prev {
+  font-family: 'Gotham Pro', sans-serif;
+  display: inline-block;
+  border-radius: 0;
+  padding: 0;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  background: none;
+  overflow: hidden;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+  width: 44px;
+  height: 44px;
+  display: block;
+  position: absolute;
+  background: url(../img/arrow-3-left.png) center no-repeat;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 19px;
+}
+.reviews__btn-prev:hover {
+  background: url(../img/arrow-3-left-h.png) center no-repeat;
+}
+.reviews__btn-next {
+  font-family: 'Gotham Pro', sans-serif;
+  display: inline-block;
+  border-radius: 0;
+  padding: 0;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  background: none;
+  overflow: hidden;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+  width: 44px;
+  height: 44px;
+  display: block;
+  position: absolute;
+  background: url(../img/arrow-3-right.png) center no-repeat;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 19px;
+}
+.reviews__btn-next:hover {
+  background: url(../img/arrow-3-right-h.png) center no-repeat;
+}
 .gallery {
   padding-top: 69px;
   text-align: center;
@@ -4867,6 +4935,14 @@ img {
   align-items: center;
   margin: 0 -82px;
 }
+.gallery-slider__item.slick-center {
+  z-index: 2;
+  position: relative;
+}
+.gallery-slider__item.slick-center + .gallery-slider__item {
+  z-index: 1;
+  position: relative;
+}
 .gallery-slider__img {
   background-color: black;
   -webkit-box-shadow: 0px 0px 29px 0px rgba(1, 1, 1, 0.19);
@@ -4886,6 +4962,19 @@ img {
   -webkit-transform: scale(1.23448276);
   -ms-transform: scale(1.23448276);
   transform: scale(1.23448276);
+}
+.gallery-slider .slick-arrow {
+  width: 64px;
+  height: 64px;
+  top: 135px;
+}
+.gallery-slider .slick-prev {
+  left: -82px;
+  background-image: url(../img/arrow-2-left.png);
+}
+.gallery-slider .slick-next {
+  right: -82px;
+  background-image: url(../img/arrow-2-right.png);
 }
 .call-me-bottom {
   background: url(../img/callme-bottom-bg.jpg) center no-repeat;
@@ -5147,16 +5236,6 @@ img {
   box-shadow: 0px 0px 12px 0px rgba(1, 1, 1, 0.45);
   width: 473px;
   height: 623px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   text-align: center;
   background-image: url(../img/small-popup-bg.jpg);
   background-repeat: no-repeat;
