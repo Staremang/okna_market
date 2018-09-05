@@ -650,6 +650,456 @@ template {
   color: black;
   opacity: 0.75;
 }
+/* Get the bourbon mixin from http://bourbon.io */
+/* Reset */
+.flip-clock-wrapper * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.flip-clock-wrapper a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #ccc;
+}
+.flip-clock-wrapper a:hover {
+  color: #fff;
+}
+.flip-clock-wrapper ul {
+  list-style: none;
+}
+.flip-clock-wrapper.clearfix:before,
+.flip-clock-wrapper.clearfix:after {
+  content: " ";
+  display: table;
+}
+.flip-clock-wrapper.clearfix:after {
+  clear: both;
+}
+.flip-clock-wrapper.clearfix {
+  *zoom: 1;
+}
+/* Main */
+.flip-clock-wrapper {
+  font: normal 11px "Helvetica Neue", Helvetica, sans-serif;
+  -webkit-user-select: none;
+}
+.flip-clock-meridium {
+  background: none !important;
+  -webkit-box-shadow: 0 0 0 !important;
+  box-shadow: 0 0 0 !important;
+  font-size: 36px !important;
+}
+.flip-clock-meridium a {
+  color: #313333;
+}
+.flip-clock-wrapper {
+  text-align: center;
+  position: relative;
+  width: 100%;
+}
+.flip-clock-wrapper:before,
+.flip-clock-wrapper:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+.flip-clock-wrapper:after {
+  clear: both;
+}
+/* Skeleton */
+.flip-clock-wrapper ul {
+  position: relative;
+  float: left;
+  margin: 0 2px;
+  width: 93px;
+  height: 134px;
+  font-size: 80px;
+  font-weight: bold;
+  line-height: 87px;
+  border-radius: 6px;
+  background: #000;
+}
+.flip-clock-wrapper ul li {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 87px;
+  text-decoration: none !important;
+}
+.flip-clock-wrapper ul li:first-child {
+  z-index: 2;
+}
+.flip-clock-wrapper ul li a {
+  display: block;
+  height: 100%;
+  -webkit-perspective: 200px;
+  -moz-perspective: 200px;
+  perspective: 200px;
+  margin: 0 !important;
+  overflow: visible !important;
+  cursor: default !important;
+}
+.flip-clock-wrapper ul li a div {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  font-size: 80px;
+  overflow: hidden;
+  outline: 1px solid transparent;
+}
+.flip-clock-wrapper ul li a div .shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+.flip-clock-wrapper ul li a div.up {
+  -webkit-transform-origin: 50% 100%;
+  -moz-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  -o-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  top: 0;
+}
+.flip-clock-wrapper ul li a div.down {
+  -webkit-transform-origin: 50% 0;
+  -moz-transform-origin: 50% 0;
+  -ms-transform-origin: 50% 0;
+  -o-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  bottom: 0;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.flip-clock-wrapper ul li a div div.inn {
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 200%;
+  color: #ccc;
+  text-shadow: 0 1px 2px #000;
+  text-align: center;
+  background-color: #333;
+  border-radius: 6px;
+  font-size: 100px;
+  padding-top: 20px;
+}
+.flip-clock-wrapper ul li a div.up div.inn {
+  top: 0;
+}
+.flip-clock-wrapper ul li a div.down div.inn {
+  bottom: 0;
+}
+/* PLAY */
+.flip-clock-wrapper ul.play li.flip-clock-before {
+  z-index: 3;
+}
+.flip-clock-wrapper .flip {
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+.flip-clock-wrapper ul.play li.flip-clock-active {
+  -webkit-animation: asd 0.5s 0.5s linear both;
+  -moz-animation: asd 0.5s 0.5s linear both;
+  animation: asd 0.5s 0.5s linear both;
+  z-index: 5;
+}
+.flip-clock-divider {
+  float: left;
+  display: inline-block;
+  position: relative;
+  width: 42px;
+  height: 100px;
+}
+.flip-clock-divider:first-child {
+  width: 0;
+}
+.flip-clock-dot {
+  display: block;
+  background: #323434;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  left: 5px;
+  display: none;
+}
+.flip-clock-divider .flip-clock-label {
+  position: absolute;
+  bottom: -66px;
+  right: -127px;
+  text-shadow: none;
+  text-transform: lowercase;
+  font-size: 24px;
+  font-family: "Museo Cyrl";
+  color: white;
+  line-height: 0.75;
+  text-align: center;
+  text-shadow: 0px 6px 8px rgba(0, 83, 88, 0.34);
+}
+.flip-clock-divider.minutes .flip-clock-divider .flip-clock-label {
+  right: -127px;
+}
+.flip-clock-divider.minutes .flip-clock-label {
+  right: -132px;
+}
+.flip-clock-divider.seconds .flip-clock-label {
+  right: -138px;
+}
+.flip-clock-dot.top {
+  top: 30px;
+}
+.flip-clock-dot.bottom {
+  bottom: 30px;
+}
+@-webkit-keyframes asd {
+  0% {
+    z-index: 2;
+  }
+  20% {
+    z-index: 4;
+  }
+  100% {
+    z-index: 4;
+  }
+}
+@-moz-keyframes asd {
+  0% {
+    z-index: 2;
+  }
+  20% {
+    z-index: 4;
+  }
+  100% {
+    z-index: 4;
+  }
+}
+@-o-keyframes asd {
+  0% {
+    z-index: 2;
+  }
+  20% {
+    z-index: 4;
+  }
+  100% {
+    z-index: 4;
+  }
+}
+@keyframes asd {
+  0% {
+    z-index: 2;
+  }
+  20% {
+    z-index: 4;
+  }
+  100% {
+    z-index: 4;
+  }
+}
+.flip-clock-wrapper ul.play li.flip-clock-active .down {
+  z-index: 2;
+  -webkit-animation: turn 0.5s 0.5s linear both;
+  -moz-animation: turn 0.5s 0.5s linear both;
+  animation: turn 0.5s 0.5s linear both;
+}
+@-webkit-keyframes turn {
+  0% {
+    -webkit-transform: rotateX(90deg);
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+  }
+}
+@-moz-keyframes turn {
+  0% {
+    -moz-transform: rotateX(90deg);
+  }
+  100% {
+    -moz-transform: rotateX(0deg);
+  }
+}
+@-o-keyframes turn {
+  0% {
+    -o-transform: rotateX(90deg);
+  }
+  100% {
+    -o-transform: rotateX(0deg);
+  }
+}
+@keyframes turn {
+  0% {
+    -webkit-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+}
+.flip-clock-wrapper ul.play li.flip-clock-before .up {
+  z-index: 2;
+  -webkit-animation: turn2 0.5s linear both;
+  -moz-animation: turn2 0.5s linear both;
+  animation: turn2 0.5s linear both;
+}
+@-webkit-keyframes turn2 {
+  0% {
+    -webkit-transform: rotateX(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(-90deg);
+  }
+}
+@-moz-keyframes turn2 {
+  0% {
+    -moz-transform: rotateX(0deg);
+  }
+  100% {
+    -moz-transform: rotateX(-90deg);
+  }
+}
+@-o-keyframes turn2 {
+  0% {
+    -o-transform: rotateX(0deg);
+  }
+  100% {
+    -o-transform: rotateX(-90deg);
+  }
+}
+@keyframes turn2 {
+  0% {
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+  }
+}
+.flip-clock-wrapper ul li.flip-clock-active {
+  z-index: 3;
+}
+/* SHADOW */
+.flip-clock-wrapper ul.play li.flip-clock-before .up .shadow {
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.1)), color-stop(100%, black));
+  background: linear, top, rgba(0, 0, 0, 0.1) 0%, black 100%;
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%);
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%);
+  background: linear, to bottom, rgba(0, 0, 0, 0.1) 0%, black 100%;
+  -webkit-animation: show 0.5s linear both;
+  -moz-animation: show 0.5s linear both;
+  animation: show 0.5s linear both;
+}
+.flip-clock-wrapper ul.play li.flip-clock-active .up .shadow {
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.1)), color-stop(100%, black));
+  background: linear, top, rgba(0, 0, 0, 0.1) 0%, black 100%;
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%);
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%);
+  background: linear, to bottom, rgba(0, 0, 0, 0.1) 0%, black 100%;
+  -webkit-animation: hide 0.5s 0.3s linear both;
+  -moz-animation: hide 0.5s 0.3s linear both;
+  animation: hide 0.5s 0.3s linear both;
+}
+/*DOWN*/
+.flip-clock-wrapper ul.play li.flip-clock-before .down .shadow {
+  background: -moz-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, black), color-stop(100%, rgba(0, 0, 0, 0.1)));
+  background: linear, top, black 0%, rgba(0, 0, 0, 0.1) 100%;
+  background: -o-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%);
+  background: -ms-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%);
+  background: linear, to bottom, black 0%, rgba(0, 0, 0, 0.1) 100%;
+  -webkit-animation: show 0.5s linear both;
+  -moz-animation: show 0.5s linear both;
+  animation: show 0.5s linear both;
+}
+.flip-clock-wrapper ul.play li.flip-clock-active .down .shadow {
+  background: -moz-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, black), color-stop(100%, rgba(0, 0, 0, 0.1)));
+  background: linear, top, black 0%, rgba(0, 0, 0, 0.1) 100%;
+  background: -o-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%);
+  background: -ms-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%);
+  background: linear, to bottom, black 0%, rgba(0, 0, 0, 0.1) 100%;
+  -webkit-animation: hide 0.5s 0.3s linear both;
+  -moz-animation: hide 0.5s 0.3s linear both;
+  animation: hide 0.5s 0.2s linear both;
+}
+@-webkit-keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-moz-keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-o-keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @font-face {
   font-family: 'Stem Extra';
   src: local('Stem Extra Light'), local('Stem-ExtraLight'), url('../fonts/Stem-ExtraLight.woff2') format('woff2'), url('../fonts/Stem-ExtraLight.woff') format('woff'), url('../fonts/Stem-ExtraLight.ttf') format('truetype');
@@ -735,7 +1185,7 @@ html {
   margin-left: auto;
   padding-right: 15px;
   padding-left: 15px;
-  width: 100%;
+  width: 1170px;
 }
 .container-small {
   margin-right: auto;
@@ -743,26 +1193,6 @@ html {
   padding-right: 15px;
   padding-left: 15px;
   width: 100%;
-}
-@media (min-width: 576px) {
-  .container {
-    max-width: 540px;
-  }
-}
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
-}
-@media (min-width: 1040px) {
-  .container {
-    max-width: 1020px;
-  }
-}
-@media (min-width: 1230px) {
-  .container {
-    max-width: 1200px;
-  }
 }
 .container-fluid {
   margin-right: auto;
@@ -2554,7 +2984,17 @@ img {
   border-bottom: 1px dashed #066781;
 }
 .section {
-  border-bottom: 3px solid red;
+  position: relative;
+  padding: 0 0;
+  overflow: hidden;
+}
+.section:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 8px;
+  width: 100%;
+  background: url(../img/delimiter.png) center;
 }
 .section-title {
   font: 500 40px/50px "Museo Cyrl", sans-serif;
@@ -2563,6 +3003,12 @@ img {
 }
 .section-title_uppercase {
   text-transform: uppercase;
+}
+.section-title_b-15 {
+  margin-bottom: 15px;
+}
+.section-title_t-57 {
+  margin-top: 57px;
 }
 .section-subtitle {
   font-size: 24px;
@@ -2577,6 +3023,7 @@ img {
   background-position: 110px 0;
   height: 570px;
   position: relative;
+  margin-bottom: 4px;
 }
 .hero__plate {
   border: 5px solid #ffdd1c;
@@ -2590,13 +3037,14 @@ img {
   color: #066781;
   width: 180px;
   height: 242px;
-  bottom: 37px;
+  bottom: 53px;
   left: 0;
   padding-top: 5px;
 }
 .hero__plate-1 {
   font-size: 33px;
   line-height: 1.2;
+  text-transform: uppercase;
 }
 .hero__plate-2 {
   font-size: 52px;
@@ -2608,14 +3056,14 @@ img {
 }
 .hero__price {
   color: #f92401;
-  font: 500 40px/45px "Museo Cyrl", sans-serif;
-  margin-top: 35px;
-  margin-bottom: 20px;
+  font: 500 40px/41px "Museo Cyrl", sans-serif;
+  margin-top: 44px;
+  margin-bottom: 15px;
 }
-.hero__price > small {
+.hero__price > .small {
   font-size: 75%;
 }
-.hero__price > long {
+.hero__price > .long {
   font-size: 125%;
 }
 .hero__old-price {
@@ -2624,6 +3072,22 @@ img {
 }
 .hero__old-price:before {
   content: '';
+  width: 160px;
+  height: 1px;
+  background: #f92401;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(-20deg);
+  -ms-transform: translate(-50%, -50%) rotate(-20deg);
+  transform: translate(-50%, -50%) rotate(-20deg);
+}
+.hero__list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 25px;
+  margin-bottom: 26px;
+  line-height: 1.5;
 }
 .hero__btn {
   font-family: 'Gotham Pro', sans-serif;
@@ -2666,173 +3130,13 @@ img {
   left: -45px;
   top: -7px;
 }
-.window-shape {
-  text-align: center;
-  margin-top: 60px;
-}
-.window-shape__img {
-  margin-bottom: 20px;
-}
-.window-shape__price {
-  color: #f92401;
-  font-weight: 500;
-  font-size: 30px;
-}
-.window-shape__price > span {
-  font-weight: bold;
-  font-size: 36px;
-}
-.window-type {
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  margin-bottom: 50px;
-  margin-top: 45px;
-}
-.window-type__item_1 {
-  background: url(../img/window-type-1.png) no-repeat;
-  background-size: contain;
-  background-position: center 70px;
-  width: 281px;
-  padding-left: 11px;
-  padding-right: 11px;
-}
-.window-type__item_2 {
-  background: url(../img/window-type-2.png) no-repeat;
-  background-size: contain;
-  background-position: center 55px;
-  width: 393px;
-  padding-left: 11px;
-  padding-right: 11px;
-}
-.window-type__item_3 {
-  background: url(../img/window-type-3.png) no-repeat;
-  background-size: contain;
-  background-position: center 70px;
-  width: 377px;
-  padding-left: 11px;
-}
-.window-type__tooltip {
-  background: #13b5bf;
-  border-radius: 5px;
-  color: white;
-  font: 500 24px/24px "Museo Cyrl", sans-serif;
-  padding: 10px 10px 11px;
-  position: relative;
-  margin-bottom: 320px;
-}
-.window-type__tooltip:before {
-  content: '';
-  position: absolute;
-  background: #13b5bf;
-  width: 15px;
-  height: 15px;
-  left: 50%;
-  top: 100%;
-  -webkit-transform: translate(-50%, -50%) rotate(45deg);
-  -ms-transform: translate(-50%, -50%) rotate(45deg);
-  transform: translate(-50%, -50%) rotate(45deg);
-}
-.window-type__text {
-  color: #f92401;
-  font-size: 22px;
-  font-weight: 500;
-}
-.window-type__price {
-  color: #f92401;
-  font-size: 30px;
-  font-family: "Museo Cyrl", sans-serif;
-  font-weight: 500;
-  margin-bottom: 10px;
-}
-.window-type__price > span {
-  font-size: 44px;
-  font-weight: bold;
-}
-.window-type__old-price {
-  font-size: 22px;
-  font-weight: 500;
-  position: relative;
-}
-.window-type__old-price:before {
-  content: '';
-  width: 160px;
-  height: 1px;
-  background: #f92401;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%) rotate(-20deg);
-  -ms-transform: translate(-50%, -50%) rotate(-20deg);
-  transform: translate(-50%, -50%) rotate(-20deg);
-}
-.free-measuring {
-  text-align: center;
-}
-.free-measuring__title {
-  font: 500 36px/40px "Museo Cyrl", sans-serif;
-}
-.free-measuring__subtitle {
-  font-size: 24px;
-  margin-bottom: 30px;
-}
-.free-measuring__btn {
-  font-family: 'Gotham Pro', sans-serif;
-  display: inline-block;
-  border-radius: 0;
-  padding: 0;
-  outline: none;
-  border: 0;
-  cursor: pointer;
-  text-decoration: none;
-  position: relative;
-  background: none;
-  overflow: hidden;
-  vertical-align: middle;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  text-align: center;
-  -webkit-tap-highlight-color: transparent;
-  font-size: 22px;
-  line-height: 1;
-  font-weight: bold;
-  color: white;
-  background: #f92401;
-  border-radius: 50px;
-  -webkit-box-shadow: 0px 11px 24px 0px rgba(252, 70, 40, 0.37);
-  box-shadow: 0px 11px 24px 0px rgba(252, 70, 40, 0.37);
-  padding: 19px 20px 15px 50px;
-  text-transform: uppercase;
-  overflow: visible;
-  margin-bottom: 64px;
-}
-.free-measuring__btn:before {
-  content: '';
-  background: url(../img/guarantee-mark.png) center no-repeat;
-  background-size: contain;
-  width: 96px;
-  height: 118px;
-  position: absolute;
-  left: -50px;
-  top: -20px;
-}
-.free-measuring__btn:hover {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#f92401), to(#db0600));
-  background-image: -webkit-linear-gradient(top, #f92401 0%, #db0600 100%);
-  background-image: -o-linear-gradient(top, #f92401 0%, #db0600 100%);
-  background-image: linear-gradient(to bottom, #f92401 0%, #db0600 100%);
-}
 .price-list {
   border-radius: 5px;
   -webkit-box-shadow: inset 0 0 0px 1px #d0e1e1;
   box-shadow: inset 0 0 0px 1px #d0e1e1;
   position: relative;
-  margin-bottom: 100px;
-  margin-top: 30px;
+  margin-bottom: 145px;
+  margin-top: 42px;
 }
 .price-list__head {
   border-radius: 5px;
@@ -2993,17 +3297,181 @@ img {
   background-image: -o-linear-gradient(top, #f92401 0%, #db0600 100%);
   background-image: linear-gradient(to bottom, #f92401 0%, #db0600 100%);
 }
+.window-type {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  margin-top: 45px;
+}
+.window-type__item_1 {
+  background: url(../img/window-type-1.png) no-repeat;
+  background-size: contain;
+  background-position: center 70px;
+  width: 281px;
+  padding-left: 11px;
+  padding-right: 11px;
+}
+.window-type__item_2 {
+  background: url(../img/window-type-2.png) no-repeat;
+  background-size: contain;
+  background-position: center 55px;
+  width: 393px;
+  padding-left: 11px;
+  padding-right: 11px;
+}
+.window-type__item_3 {
+  background: url(../img/window-type-3.png) no-repeat;
+  background-size: contain;
+  background-position: center 70px;
+  width: 377px;
+  padding-left: 11px;
+}
+.window-type__tooltip {
+  background: #13b5bf;
+  border-radius: 5px;
+  color: white;
+  font: 500 24px/24px "Museo Cyrl", sans-serif;
+  padding: 10px 10px 11px;
+  position: relative;
+  margin-bottom: 320px;
+}
+.window-type__tooltip:before {
+  content: '';
+  position: absolute;
+  background: #13b5bf;
+  width: 15px;
+  height: 15px;
+  left: 50%;
+  top: 100%;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  -ms-transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.window-type__text {
+  color: #f92401;
+  font-size: 22px;
+  font-weight: 500;
+}
+.window-type__price {
+  color: #f92401;
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.window-type__price > span {
+  font-size: 40px;
+  font-weight: bold;
+}
+.window-type__old-price {
+  font-size: 22px;
+  font-weight: 500;
+  position: relative;
+}
+.window-type__old-price:before {
+  content: '';
+  width: 160px;
+  height: 1px;
+  background: #f92401;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(-20deg);
+  -ms-transform: translate(-50%, -50%) rotate(-20deg);
+  transform: translate(-50%, -50%) rotate(-20deg);
+}
+.free-measuring {
+  text-align: center;
+}
+.free-measuring__title {
+  font: 500 36px/40px "Museo Cyrl", sans-serif;
+}
+.free-measuring__subtitle {
+  font-size: 24px;
+  margin-bottom: 34px;
+  margin-top: 9px;
+}
+.free-measuring__btn {
+  font-family: 'Gotham Pro', sans-serif;
+  display: inline-block;
+  border-radius: 0;
+  padding: 0;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  background: none;
+  overflow: hidden;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+  font-size: 22px;
+  line-height: 1;
+  font-weight: bold;
+  color: white;
+  background: #f92401;
+  border-radius: 50px;
+  -webkit-box-shadow: 0px 11px 24px 0px rgba(252, 70, 40, 0.37);
+  box-shadow: 0px 11px 24px 0px rgba(252, 70, 40, 0.37);
+  padding: 19px 20px 15px 50px;
+  text-transform: uppercase;
+  overflow: visible;
+  margin-bottom: 71px;
+  margin-left: 48px;
+}
+.free-measuring__btn:before {
+  content: '';
+  background: url(../img/guarantee-mark.png) center no-repeat;
+  background-size: contain;
+  width: 96px;
+  height: 118px;
+  position: absolute;
+  left: -50px;
+  top: -20px;
+}
+.free-measuring__btn:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f92401), to(#db0600));
+  background-image: -webkit-linear-gradient(top, #f92401 0%, #db0600 100%);
+  background-image: -o-linear-gradient(top, #f92401 0%, #db0600 100%);
+  background-image: linear-gradient(to bottom, #f92401 0%, #db0600 100%);
+}
+.window-shape {
+  text-align: center;
+  margin-top: 68px;
+}
+.window-shape__img {
+  margin-bottom: 24px;
+}
+.window-shape__price {
+  color: #f92401;
+  font-weight: 500;
+  font-size: 30px;
+}
+.window-shape__price > span {
+  font-weight: bold;
+  font-size: 36px;
+}
 .find-price {
   background: -webkit-gradient(linear, left top, left bottom, from(#fff201), color-stop(50%, #ffcf27));
   background: -webkit-linear-gradient(top, #fff201 0%, #ffcf27 50%);
   background: -o-linear-gradient(top, #fff201 0%, #ffcf27 50%);
   background: linear-gradient(to bottom, #fff201 0%, #ffcf27 50%);
-  padding: 50px 0 45px;
-  margin-top: 50px;
+  padding: 43px 0 45px;
+  margin-top: 52px;
+  margin-bottom: 52px;
 }
 .find-price__subtitle {
   font-size: 18px;
   text-transform: uppercase;
+  text-align: center;
+  margin-top: 12px;
 }
 .find-price__form {
   display: -webkit-box;
@@ -3012,7 +3480,7 @@ img {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin-top: 30px;
+  margin-top: 35px;
   margin-bottom: 35px;
 }
 .find-price__input {
@@ -3043,7 +3511,7 @@ img {
   font-size: 20px;
   font-weight: 300;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
 }
 .find-price__note {
   font-size: 12px;
@@ -3056,10 +3524,14 @@ img {
 .colors-section__subtitle {
   font: 500 30px/35px "Museo Cyrl", sans-serif;
   color: #066781;
+  margin-top: 9px;
+  margin-bottom: 40px;
 }
 .colors-section__text {
   font-size: 24px;
   font-weight: 500;
+  margin-top: 51px;
+  margin-bottom: 10px;
 }
 .colors-section__more {
   font-size: 24px;
@@ -3067,6 +3539,9 @@ img {
   font-family: "Museo Cyrl", sans-serif;
   color: #066781;
   border-bottom: 1px dashed #066781;
+  text-decoration: none;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
 }
 .colors-slider {
   width: 900px;
@@ -3099,7 +3574,8 @@ img {
 .equipment-section {
   background: url(../img/blue-bg.png) center no-repeat;
   height: 499px;
-  padding-top: 50px;
+  padding-top: 85px;
+  margin-top: 16px;
 }
 .equipment-section__title {
   font: 500 40px/50px "Museo Cyrl", sans-serif;
@@ -3110,11 +3586,74 @@ img {
   text-align: center;
   margin-bottom: 14px;
 }
+.equipment-slider {
+  width: 1045px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.equipment-slider__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.equipment-slider__img {
+  border-radius: 10px;
+  background-color: white;
+  width: 330px;
+  height: 240px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.equipment-slider__name {
+  border-radius: 22px;
+  background-color: #fbdd01;
+  -webkit-box-shadow: 0px 11px 24px 0px rgba(3, 140, 148, 0.37);
+  box-shadow: 0px 11px 24px 0px rgba(3, 140, 148, 0.37);
+  width: 262px;
+  height: 44px;
+  margin-top: -17px;
+  margin-bottom: 15px;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 10px;
+}
+.equipment-slider__price {
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  text-shadow: 0px 6px 8px rgba(0, 83, 88, 0.34);
+}
 /*
  * Преимущества
  */
-.advantages__item {
+.advantages__block {
   height: 299px;
+  background: url(../img/advantages-bg.png) left 40px no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+.advantages__item {
+  padding-top: 70px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+.advantages__text {
+  font: 500 22px/26px "Museo Cyrl", sans-serif;
+  text-transform: uppercase;
+  margin-left: 188px;
 }
 /*
  * Определились с выбором?
@@ -3122,12 +3661,12 @@ img {
 .section-call-me {
   background: url(../img/section-call-me-bg.jpg) center no-repeat;
   background-size: auto 100%;
-  margin-bottom: 50px;
+  margin-bottom: 70px;
 }
 .section-call-me__title {
   font: 500 40px/50px "Museo Cyrl", sans-serif;
   text-transform: uppercase;
-  margin-bottom: 45px;
+  margin-bottom: 36px;
 }
 .section-call-me__text {
   font: 500 30px/40px "Museo Cyrl", sans-serif;
@@ -3143,13 +3682,14 @@ img {
   height: 436px;
   padding: 0 33px;
   margin-left: 40px;
+  margin-right: 10px;
 }
 .section-call-me__form-title {
   font-size: 30px;
-  margin: 35px 0 30px;
+  margin: 39px 0 30px;
 }
 .section-call-me__btn {
-  margin-top: 28px;
+  margin-top: 33px;
 }
 .section-call-me__note {
   font-size: 11px;
@@ -3172,9 +3712,21 @@ img {
   align-items: center;
   height: 540px;
 }
+.production-time {
+  margin-bottom: 70px;
+}
+.production-time__title {
+  margin-bottom: 36px;
+}
 /*
  * Оконные профили
  */
+.window-profiles {
+  width: 1056px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 64px;
+}
 .window-profiles__item {
   text-align: center;
   display: -webkit-box;
@@ -3187,7 +3739,7 @@ img {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 54px;
 }
 .window-profiles__img {
   border-radius: 50%;
@@ -3223,13 +3775,16 @@ img {
   color: #f92401;
   font-weight: bold;
 }
+.window-profiles-title {
+  margin: 74px 0 41px;
+}
 .colorful-crap {
   height: 886px;
   background: url(../img/blue-bg.png) bottom no-repeat, -webkit-gradient(linear, left top, left bottom, from(#fff201), color-stop(50%, #ffcf27));
   background: url(../img/blue-bg.png) bottom no-repeat, -webkit-linear-gradient(top, #fff201 0%, #ffcf27 50%);
   background: url(../img/blue-bg.png) bottom no-repeat, -o-linear-gradient(top, #fff201 0%, #ffcf27 50%);
   background: url(../img/blue-bg.png) bottom no-repeat, linear-gradient(to bottom, #fff201 0%, #ffcf27 50%);
-  padding-top: 60px;
+  padding-top: 63px;
 }
 /*
  * Не нужно переплачивать
@@ -3276,16 +3831,29 @@ img {
 .timer__note > a {
   color: inherit;
 }
+.timer__btn {
+  font-weight: 400;
+}
 .timer-val {
   height: 180px;
   margin-bottom: 16px;
+  width: 666px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.customers__subtitle {
+  width: 830px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 37px;
 }
 /*
  * Отзывы
  */
 .reviews-section {
   background: url(../img/reviews-bg.png) top no-repeat;
-  padding-top: 70px;
+  padding-top: 75px;
+  margin-top: 34px;
 }
 .reviews-section__title {
   font: 500 40px/50px "Museo Cyrl", sans-serif;
@@ -3297,6 +3865,7 @@ img {
 }
 .reviews {
   text-align: center;
+  margin-bottom: 71px;
 }
 .reviews__item {
   display: -webkit-box;
@@ -3335,7 +3904,7 @@ img {
   -ms-flex-pack: center;
   justify-content: center;
   margin-bottom: 60px;
-  margin-top: -50px;
+  margin-top: -54px;
 }
 .reviews__name {
   font-size: 26px;
@@ -3378,6 +3947,145 @@ img {
   font-size: 22px;
   margin-bottom: 0;
   margin-top: 0;
+}
+.gallery {
+  padding-top: 69px;
+  text-align: center;
+}
+.gallery__name {
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.gallery__price {
+  font-size: 24px;
+  font-weight: 500;
+}
+.gallery__value {
+  font-size: 30px;
+  font-weight: bold;
+  color: #f92401;
+}
+.gallery-slider {
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 28px;
+  margin-bottom: 13px;
+}
+.gallery-slider__item {
+  width: 442px;
+  height: 440px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 -82px;
+}
+.gallery-slider__img {
+  background-color: black;
+  -webkit-box-shadow: 0px 0px 29px 0px rgba(1, 1, 1, 0.19);
+  box-shadow: 0px 0px 29px 0px rgba(1, 1, 1, 0.19);
+  border-radius: 8px;
+  width: 442px;
+  height: 290px;
+  -webkit-transition: -webkit-transform .3s ease;
+  transition: -webkit-transform .3s ease;
+  -o-transition: transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease;
+  border: 1px solid green;
+}
+.slick-center .gallery-slider__img {
+  border: 3px solid #fc4628;
+  -webkit-transform: scale(1.23448276);
+  -ms-transform: scale(1.23448276);
+  transform: scale(1.23448276);
+}
+.call-me-bottom {
+  background: url(../img/callme-bottom-bg.jpg) center no-repeat;
+  height: 560px;
+  margin-top: 18px;
+  padding-top: 67px;
+}
+.call-me-bottom__title {
+  font: 500 40px/50px "Museo Cyrl", sans-serif;
+  margin: 0;
+}
+.call-me-bottom__subtitle {
+  font-size: 30px;
+  color: #066781;
+  margin: 6px 0 14px;
+}
+.call-me-bottom__number {
+  font: 500 40px/50px "Museo Cyrl", sans-serif;
+  text-decoration: none;
+  color: black;
+}
+.call-me-bottom__block {
+  padding-left: 96px;
+}
+.call-me-bottom__form {
+  width: 390px;
+  margin-top: 15px;
+  text-align: center;
+  border-radius: 10px;
+  background: white;
+  -webkit-box-shadow: 0px 0px 29px 0px rgba(1, 1, 1, 0.1);
+  box-shadow: 0px 0px 29px 0px rgba(1, 1, 1, 0.1);
+  padding: 34px 33px 37px;
+}
+.call-me-bottom__form-title {
+  font-size: 22px;
+  line-height: 22px;
+  margin-bottom: 24px;
+}
+.call-me-bottom__note {
+  color: white;
+  font-size: 11px;
+  margin-top: 20px;
+}
+.call-me-bottom__note > a {
+  color: white;
+}
+.footer-top {
+  background: white;
+}
+.footer-top__nav {
+  height: 95px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.footer-top__link {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: black;
+  text-decoration: none;
+  margin-left: 20px;
+}
+.footer-bottom {
+  background: url(../img/footer-bg.png) center;
+}
+.footer-bottom__block {
+  height: 95px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=main.css.map */
