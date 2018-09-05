@@ -4957,8 +4957,6 @@ img {
 }
 .gallery-slider__img {
   background-color: black;
-  -webkit-box-shadow: 0px 0px 29px 0px rgba(1, 1, 1, 0.19);
-  box-shadow: 0px 0px 29px 0px rgba(1, 1, 1, 0.19);
   border-radius: 8px;
   width: 442px;
   height: 290px;
@@ -4970,7 +4968,8 @@ img {
   background-size: cover;
 }
 .slick-center .gallery-slider__img {
-  border: 3px solid #fc4628;
+  -webkit-box-shadow: 0px 0px 29px 0px rgba(1, 1, 1, 0.19), inset 0 0 0px 3px #fc4628;
+  box-shadow: 0px 0px 29px 0px rgba(1, 1, 1, 0.19), inset 0 0 0px 3px #fc4628;
   -webkit-transform: scale(1.23448276);
   -ms-transform: scale(1.23448276);
   transform: scale(1.23448276);

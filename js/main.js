@@ -35,8 +35,9 @@ $(document).ready(function () {
 		infinite: true,
 //		slidesToShow: 3,
 		centerMode: true,
-		centerPadding: '60px',
-		variableWidth: true
+//		centerPadding: '60px',
+		variableWidth: true,
+		draggable: false
 	});
 	$('.gallery-slider').on('afterChange', function (e, s) {
 		var activeBlock = s.$slider.find('.slick-center');
