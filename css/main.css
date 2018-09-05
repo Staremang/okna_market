@@ -1907,7 +1907,7 @@ li.fancybox-thumbs-loading {
   font-style: normal;
 }
 @font-face {
-  font-family: 'Museo Cyrl 500';
+  font-family: 'Museo Cyrl';
   src: local('Museo Cyrl 500'), local('MuseoCyrl-500'), url('../fonts/MuseoCyrl-500.woff2') format('woff2'), url('../fonts/MuseoCyrl-500.woff') format('woff'), url('../fonts/MuseoCyrl-500.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;

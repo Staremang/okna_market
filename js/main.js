@@ -61,15 +61,15 @@ $(document).ready(function () {
 		$('.reviews').slick("slickPrev");
 	})
 	
-	
-	var t = $('.timer-val').FlipClock({
+	var t = $('.timer-val').FlipClock(0, {
 		countdown: true,
 		defaultLanguage: 'ru-ru',
 		language: 'ru-ru',
 	});
 //	var t = $('.timer-val').FlipClock(86400, {
 //		countdown: true,
-////		defaultClockFace: 'ru-ru'
+//		defaultLanguage: 'ru-ru',
+//		language: 'ru-ru',
 //	});
 //	console.log(t);
 
