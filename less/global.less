@@ -1,4 +1,4 @@
-@develop-mode: true;
+@develop-mode: false;
 
 
 
@@ -50,7 +50,7 @@ body {
 	
 	& when (@develop-mode = true) {
 //		background: url(/img/rm/bg.jpg) top center;
-//		background: url(/img/rm/1.jpg) top center;
+		background: url(/img/rm/1.jpg) top center;
 	}
 }
 img {
@@ -612,9 +612,11 @@ img {
 	margin-bottom: 50px;
 	margin-top: 45px;
 	&__item {
+		background-size: contain;
+		background-repeat: no-repeat;
+		
 		&_1 {
-			background: url(../img/window-type-1.png) no-repeat;
-			background-size: contain;
+			background-image: url(../img/window-type-1.png);
 			background-position: center 70px;
 			width: 281px;
 			
@@ -622,8 +624,7 @@ img {
 			padding-right: 11px;
 		}
 		&_2 {
-			background: url(../img/window-type-2.png) no-repeat;
-			background-size: contain;
+			background-image: url(../img/window-type-2.png);
 			background-position: center 70px-15px;
 			width: 393px;
 			
@@ -631,8 +632,7 @@ img {
 			padding-right: 11px;
 		}
 		&_3 {
-			background: url(../img/window-type-3.png) no-repeat;
-			background-size: contain;
+			background-image: url(../img/window-type-3.png);
 			background-position: center 70px;
 			width: 377px;
 			padding-left: 11px;
@@ -779,7 +779,7 @@ img {
 		width: 218px;
 		
 		
-		background: white;
+		background: white 3px center no-repeat;
 		border: 0;
 		border-radius: 26px;
 		font-family: 'Gotham Pro', sans-serif;
@@ -791,11 +791,17 @@ img {
 		transition: all .3s ease;
 		outline: none;
 		color: black;
-		height: 50px;
+		height: 51px;
 		margin-right: 21px;
 		
 		box-shadow: 0px 11px 24px 0px rgba(159, 137, 14, 0.37);
 		
+		&_tel {
+			background-image: url(../img/b-tel.png);
+		}
+		&_name {
+			background-image: url(../img/b-name.png);
+		}
 	}
 	&__btn {
 		width: 250px;
@@ -864,10 +870,34 @@ img {
 		border-radius: 50%;
 		background-color: black;
 		margin-bottom: 30px;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
 	}
 	&__text {
 		font-size: 18px;
 		font-weight: 300;
+	}
+	
+	.slick-arrow {
+		width: 43px;
+		height: 61px;
+		top: 79px;
+	}
+	.slick-prev {
+		left: -5-44px;
+		background-image: url(../img/arrow-1-left.png);
+		&:hover {
+			background-image: url(../img/arrow-1-left-h.png);
+		}
+	}
+	.slick-next {
+		right: -17px-44px;
+		background-image: url(../img/arrow-1-right.png);
+		&:hover {
+			background-image: url(../img/arrow-1-right-h.png);
+		}
+		
 	}
 }
 
@@ -935,7 +965,27 @@ img {
 		text-align: center;
 		text-shadow: 0px 6px 8px rgba(0, 83, 88, 0.34);
 	}
+	
+	
+	
+	.slick-arrow {
+		width: 64px;
+		height: 64px;
+		top: 135px;
+	}
+	.slick-prev {
+		left: -82px;
+		background-image: url(../img/arrow-2-left.png);
+	}
+	.slick-next {
+		right: -82px;
+		background-image: url(../img/arrow-2-right.png);
+		
+	}
 }
+
+
+
 /*
  * Преимущества
  */
@@ -956,7 +1006,7 @@ img {
 		
 		font: 500 22px/26px @font-museo;
 		text-transform: uppercase;
-		margin-left: 188px;
+		margin-left: 196px;
 	}
 //	&__ {
 //		
@@ -1037,6 +1087,10 @@ img {
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 64px;
+	
+	& when (@develop-mode = true) {
+		opacity: .5;
+	}
 	&__item {
 		text-align: center;
 		display: flex;
@@ -1044,6 +1098,11 @@ img {
 //		justify-content: center;
 		align-items: center;
 		margin-top: 54px;
+		&:hover {
+			.window-profiles__img {
+				box-shadow: inset 0 0 0px 3px #fbdd01;
+			}
+		}
 	}
 	&__img {
 		border-radius: 50%;
@@ -1081,6 +1140,27 @@ img {
 		color: @red;
 		font-weight: bold;
 	}
+	
+	.slick-arrow {
+		width: 43px;
+		height: 61px;
+		top: 230px;
+	}
+	.slick-prev {
+		left: -61px;
+		background-image: url(../img/arrow-1-left.png);
+		&:hover {
+			background-image: url(../img/arrow-1-left-h.png);
+		}
+	}
+	.slick-next {
+		right: -71px;
+		background-image: url(../img/arrow-1-right.png);
+		&:hover {
+			background-image: url(../img/arrow-1-right-h.png);
+		}
+		
+	}
 }
 .window-profiles-title {
 	margin: 74px 0 41px;
@@ -1091,7 +1171,9 @@ img {
 	background: url(../img/blue-bg.png) bottom no-repeat, linear-gradient(to bottom, #fff201 0%, #ffcf27 50%);
 	padding-top: 63px;
 	
-//	opacity: .5;
+	& when (@develop-mode = true) {
+		opacity: .5;
+	}
 }
 
 
@@ -1100,8 +1182,34 @@ img {
  */
 .no-overpayments {
 	margin-top: 50px;
-	&__img {
+	&__top {
 		height: 140px;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		position: relative;
+	}
+	&__img {
+	}
+	&__price {
+		background: url(../img/saving-bg.png) center no-repeat;
+		background-size: contain;
+		width: 141px;
+		height: 79px;
+		transform: rotate(-5deg);
+		
+		color: white;
+		font-size: 17px;
+		text-shadow: 0px 1px 0px #620101;
+
+		margin-left: 16px;
+		margin-bottom: 35px;
+		padding-left: 36px;
+		padding-top: 13px;
+		> span {
+			font-size: 25px;
+			font-weight: bold;
+		}
 	}
 	&__text {
 		font: 500 30px/30px @font-museo;
@@ -1362,6 +1470,17 @@ img {
 		display: flex;
 		justify-content: flex-end;
 		align-items: center;
+		position: relative;
+		&:before {
+			content: '';
+			background: url(../img/logo.png) center no-repeat;
+			background-size: contain;
+			width: 143px;
+			height: 155px;
+			position: absolute;
+			left: 0;
+			top: 27px;
+		}
 	}
 	&__link {
 		font-size: 16px;
@@ -1378,5 +1497,56 @@ img {
 		display: flex;
 		justify-content: flex-end;
 		align-items: center;
+	}
+	&__item {
+		position: relative;
+		padding-left: 82px;
+		font-size: 18px;
+		line-height: 24px;
+		display: flex;
+		flex-direction: column;
+		margin-left: 35px;
+		&:before {
+			content: '';
+			position: absolute;
+			border: 1px solid black;
+			border-radius: 50%;
+			width: 49px;
+			height: 49px;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		&_1 {
+			&:before {
+				background: url(../img/footer-i-time.png) center no-repeat;
+			}
+		}
+		&_2 {
+			&:before {
+				background: url(../img/footer-i-mark.png) center no-repeat;
+			}
+		}
+		&_3 {
+			text-align: right;
+			&:before {
+				background: url(../img/footer-i-tel.png) center no-repeat;
+			}
+		}
+		
+	}
+	&__number {
+		font-family: @font-museo;
+		font-weight: 500;
+		font-size: 26px;
+		color: black;
+		text-decoration: none;
+	}
+	&__button {
+		font-family: @font-museo;
+		font-weight: 500;
+		font-size: 18px;
+		color: #066781;
+		text-decoration: none;
 	}
 }
