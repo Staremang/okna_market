@@ -17,10 +17,10 @@
 						Хотите купить окна дешевле?<br>
 						100% Вы на нужном сайте!
 					</div>
-					<button class="header-top__btn">Бесплатная консультация</button>
+					<button class="header-top__btn" data-fancybox data-src="#free-consultation">Бесплатная консультация</button>
 					<div class="header-top__number">
 						<a href="tel:88005848545" class="header-top__tel">8 800 584 85 45</a>
-						<a href="#" class="header-top__call-me">Вам перезвонить?</a>
+						<a href="#call-me" class="header-top__call-me" data-fancybox data-src="#call-me">Вам перезвонить?</a>
 					</div>
 				</div> 
 			</div>
@@ -29,10 +29,10 @@
 			<div class="container header__container">
 				<a href="#" class="header-logo"></a>
 				<nav class="header-nav">
-					<a href="#" class="header-nav__item">Пластиковые окна</a>
-					<a href="#" class="header-nav__item">Балконы и лоджии</a>
-					<a href="#" class="header-nav__item">Окна дома</a>
-					<a href="#" class="header-nav__item">Цены</a>
+					<a href="#popup-1" data-fancybox data-src="#popup-1" class="header-nav__item">Пластиковые окна</a>
+					<a href="#popup-2" data-fancybox data-src="#popup-2" class="header-nav__item">Балконы и лоджии</a>
+					<a href="#popup-3" data-fancybox data-src="#popup-3" class="header-nav__item">Окна дома</a>
+					<a href="#popup-4" data-fancybox data-src="#popup-4" class="header-nav__item">Цены</a>
 					<a href="#" class="header-nav__item">Акции</a>
 					<a href="#" class="header-nav__item">Рассрочка</a>
 					<a href="#" class="header-nav__item">Контакты</a>
@@ -70,7 +70,7 @@
 						<li>*Гарантия качества</li>
 					</ul>
 					
-					<button class="btn hero__btn">Оставить заявку <br>на бесплатный замер</button>
+					<button class="btn hero__btn" data-fancybox data-src="#free-measuring">Оставить заявку <br>на бесплатный замер</button>
 					<div class="">
 						Забронировать скидку<br>
 						до - 50% на 3 дня!
@@ -153,7 +153,7 @@
 						<div class="price-hero-item__label">Стеклопакет</div>
 						<div class="price-hero-item__text">3 стекла</div>
 					</div>
-					<button class="price-hero-item__btn">Заказать <br>по лучшей цене</button>
+					<button class="price-hero-item__btn" data-fancybox data-src="#order-window">Заказать <br>по лучшей цене</button>
 					
 				</div>
 			</div>
@@ -209,7 +209,7 @@
 			<div class="free-measuring">
 				<div class="free-measuring__title">Оставить заявку на бесплатный замер</div>
 				<div class="free-measuring__subtitle">Забронировать скидку до - 50% на 3 дня! </div>
-				<button class="free-measuring__btn">Оставить заявку</button> 
+				<button class="free-measuring__btn" data-fancybox data-src="#free-measuring">Оставить заявку</button> 
 			</div>
 		</div>
 	</div>
@@ -307,7 +307,7 @@
 					</div>
 				</div>
 				<div class="colors-section__text">Цветные окна сейчас на 40% дешевле</div>
-				<a href="#" class="colors-section__more">Узнать подробности</a>
+				<a href="#wood-window" class="colors-section__more" data-fancybox data-src="#wood-window">Узнать подробности</a>
 			</div>
 		</div>
 		<div class="equipment-section">
@@ -390,13 +390,13 @@
 				<form action="" class="section-call-me__form">
 					<div class="section-call-me__form-title">Заказать звонок</div>
 					<label class="item-group item-group_icon item-group_icon-name">
-						<input type="text" autocomplete="name" name="name" class="popup-wrapper__input item-group__input" placeholder="Ваше имя">
+						<input type="text" autocomplete="name" name="name" class="item-group__input" placeholder="Ваше имя">
 					</label>
 					<label class="item-group item-group_icon item-group_icon-email">
-						<input type="email" autocomplete="email" name="email" class="popup-wrapper__input item-group__input" placeholder="E-mail">
+						<input type="email" autocomplete="email" name="email" class="item-group__input" placeholder="E-mail">
 					</label>
 					<label class="item-group item-group_icon item-group_icon-tel">
-						<input type="tel" autocomplete="tel" name="tel" class="popup-wrapper__input item-group__input" placeholder="Телефон">
+						<input type="tel" autocomplete="tel" name="tel" class="item-group__input" placeholder="Телефон">
 					</label>
 					<button type="submit" class="section-call-me__btn btn btn_red btn_block">Заказать</button>
 					<div class="section-call-me__note">
@@ -520,7 +520,7 @@
 					<form action="" class="timer__form row justify-content-center">
 						<div class="col-5">
 							<label class="item-group item-group_icon item-group_icon-tel">
-								<input type="tel" autocomplete="tel" name="tel" class="popup-wrapper__input item-group__input" placeholder="Телефон">
+								<input type="tel" autocomplete="tel" name="tel" class="item-group__input" placeholder="Телефон">
 							</label>
 						</div>
 						<div class="col-5">
@@ -590,7 +590,7 @@
 				<form action="" class="call-me-bottom__form">
 					<div class="call-me-bottom__form-title">Оставьте свой номер телефона, и мы перезвоним Вам через 5 минут</div>
 					<label class="item-group item-group_icon item-group_icon-tel">
-						<input type="tel" autocomplete="tel" name="tel" class="popup-wrapper__input item-group__input" placeholder="Телефон">
+						<input type="tel" autocomplete="tel" name="tel" class="item-group__input" placeholder="Телефон">
 					</label>
 					<button type="submit" class="call-me-bottom__btn btn btn_red btn_block">Заказать звонок</button>
 				</form>
@@ -631,6 +631,179 @@
 			</div>
 		</div>
 	</footer>
+	<div class="small-popup" id="popup-1">
+		<div class="small-popup__title">
+			не уходите<br>
+			без подарка!
+		</div>
+		<div class="small-popup__text-1">Впишите свой телефон, и мы вышлем вам</div>
+		<div class="small-popup__text-2">Список подарков на выбор!</div>
+		<form action="" class="small-popup__form">
+				<label class="item-group item-group_icon item-group_icon-tel">
+					<input type="tel" autocomplete="tel" name="tel" class="item-group__input" placeholder="Телефон">
+				</label>
+				<button type="submit" class="small-popup__btn-1 btn btn_red btn_block">получить подарок</button>
+			<div class="small-popup__note">Оставляя свои контактные данные, вы подтверждаете свое совершеннолетие, соглашаетесь на обработку персональных данных в соответствии с <a href="#">Правовой информацией</a></div>
+		</form>
+	</div>
+	
+	<div class="small-popup small-popup_orange" id="popup-2">
+		<div class="small-popup__title">Поздравляем!</div>
+		<div class="small-popup__text-3">Вы стали 100 посетителем сайта!</div>
+		<div class="small-popup__text-4">Ваш уникальный код: <b>1652</b></div>
+		<div class="small-popup__text-5">Для получения подарка заполните форму</div>
+		<form action="" class="small-popup__form">
+				<label class="item-group item-group_icon item-group_icon-name">
+					<input type="text" autocomplete="name" name="name" class="item-group__input" placeholder="Ваше имя">
+				</label>
+				<label class="item-group item-group_icon item-group_icon-tel">
+					<input type="tel" autocomplete="tel" name="tel" class="item-group__input" placeholder="Телефон">
+				</label>
+				<button type="submit" class="small-popup__btn-2 btn btn_red btn_block">Хочу подарок</button>
+			<div class="small-popup__note">Оставляя свои контактные данные, вы подтверждаете свое совершеннолетие, соглашаетесь на обработку персональных данных в соответствии с <a href="#">Правовой информацией</a></div>
+		</form>
+	</div>
+	
+	
+	<div class="popup popup_m" id="wood-window">
+		<div class="popup__wrapper">
+			<div class="popup__title">
+				УЗНАТЬ СТОИМОСТЬ<br>
+				на пластиковые окна под дерево
+			</div>
+			<div class="popup__block">
+				<div class="popup__form-title">Впишите своё имя и телефон для получения самой низкой цены </div>
+				<div class="popup__form-subtitle">
+					ОБЯЗАТЕЛЬНО!<br>
+					Зафиксируйте свою скидку! 
+				</div>
+				<form action="" class="popup__form">
+					<label class="item-group item-group_icon item-group_icon-name">
+						<input type="text" autocomplete="name" name="name" class="item-group__input" placeholder="Ваше имя">
+					</label>
+					<label class="item-group item-group_icon item-group_icon-tel">
+						<input type="tel" autocomplete="tel" name="tel" class="item-group__input" placeholder="Телефон">
+					</label>
+					<button type="submit" class="popup__btn btn btn_red btn_block">Узнать стоимость</button>
+					<div class="popup__note">
+						Оставляя свои контактные данные, вы подтверждаете свое совершеннолетие, соглашаетесь на обработку персональных данных в соответствии с <a href="#">Правовой информацией</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="popup" id="call-me">
+		<div class="popup__wrapper">
+			<div class="popup__title popup__title_uppercase">Вам перезвонить? </div>
+			<div class="popup__block">
+				<form action="" class="popup__form">
+					<div class="popup__form-title popup__form-title_67">Впишите своё имя и телефон <br>и мы вам перезвоним</div>
+					<label class="item-group item-group_icon item-group_icon-name">
+						<input type="text" autocomplete="name" name="name" class="item-group__input" placeholder="Ваше имя">
+					</label>
+					<label class="item-group item-group_icon item-group_icon-tel">
+						<input type="tel" autocomplete="tel" name="tel" class="item-group__input" placeholder="Телефон">
+					</label>
+					<button type="submit" class="popup__btn btn btn_red btn_block">Заказать звонок</button>
+					<div class="popup__note">
+						Оставляя свои контактные данные, вы подтверждаете свое совершеннолетие, соглашаетесь на обработку персональных данных в соответствии с <a href="#">Правовой информацией</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="popup" id="free-consultation">
+		<div class="popup__wrapper">
+			<div class="popup__title popup__title_uppercase">Бесплатная консультация </div>
+			<div class="popup__block">
+				<form action="" class="popup__form">
+					<div class="popup__form-title popup__form-title_67">Впишите своё имя и телефон чтобы заказать бесплатную консультацию</div>
+					<label class="item-group item-group_icon item-group_icon-name">
+						<input type="text" autocomplete="name" name="name" class="item-group__input" placeholder="Ваше имя">
+					</label>
+					<label class="item-group item-group_icon item-group_icon-tel">
+						<input type="tel" autocomplete="tel" name="tel" class="item-group__input" placeholder="Телефон">
+					</label>
+					<button type="submit" class="popup__btn btn btn_red btn_block">Заказать звонок</button>
+					<div class="popup__note">
+						Оставляя свои контактные данные, вы подтверждаете свое совершеннолетие, соглашаетесь на обработку персональных данных в соответствии с <a href="#">Правовой информацией</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="popup popup_alt-bg" id="free-measuring">
+		<div class="popup__wrapper">
+			<div class="popup__title popup__title_uppercase">Бесплатный выезд замерщика</div>
+			<div class="popup__block">
+				<div class="popup__form-title popup__form-title_67">Впишите своё имя и телефон <br>и мы согласуем с вами удобное <br>время для замера</div>
+				<form action="" class="popup__form">
+					<label class="item-group item-group_icon item-group_icon-name">
+						<input type="text" autocomplete="name" name="name" class="item-group__input" placeholder="Ваше имя">
+					</label>
+					<label class="item-group item-group_icon item-group_icon-tel">
+						<input type="tel" autocomplete="tel" name="tel" class="item-group__input" placeholder="Телефон">
+					</label>
+					<button type="submit" class="popup__btn btn btn_red btn_block">Заказать звонок</button>
+					<div class="popup__note">
+						Оставляя свои контактные данные, вы подтверждаете свое совершеннолетие, соглашаетесь на обработку персональных данных в соответствии с <a href="#">Правовой информацией</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="popup" id="order-window">
+		<div class="popup__wrapper">
+			<div class="popup__title popup__title_uppercase">Заказать пластиковое окно</div>
+			<div class="popup__block">
+				<div class="popup__form-title">Впишите своё имя и телефон для получения самой низкой цены </div>
+				<div class="popup__form-subtitle">
+					ОБЯЗАТЕЛЬНО!<br>
+					Зафиксируйте свою скидку! 
+				</div>
+				<form action="" class="popup__form">
+					<label class="item-group item-group_icon item-group_icon-name">
+						<input type="text" autocomplete="name" name="name" class="item-group__input" placeholder="Ваше имя">
+					</label>
+					<label class="item-group item-group_icon item-group_icon-tel">
+						<input type="tel" autocomplete="tel" name="tel" class="item-group__input" placeholder="Телефон">
+					</label>
+					<button type="submit" class="popup__btn btn btn_red btn_block">Заказать</button>
+					<div class="popup__note">
+						Оставляя свои контактные данные, вы подтверждаете свое совершеннолетие, соглашаетесь на обработку персональных данных в соответствии с <a href="#">Правовой информацией</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="popup" id="popup-3">
+		<div class="popup__wrapper">
+			<div class="popup__title popup__title_uppercase">ЗАКАЗАТЬ ОКНА ДЕШЕВЛЕ?</div>
+			<div class="popup__block">
+				<div class="popup__form-title">Впишите своё имя и телефон для получения самой низкой цены </div>
+				<div class="popup__form-subtitle">
+					ОБЯЗАТЕЛЬНО!<br>
+					Зафиксируйте свою скидку! 
+				</div>
+				<form action="" class="popup__form">
+					<label class="item-group item-group_icon item-group_icon-name">
+						<input type="text" autocomplete="name" name="name" class="item-group__input" placeholder="Ваше имя">
+					</label>
+					<label class="item-group item-group_icon item-group_icon-tel">
+						<input type="tel" autocomplete="tel" name="tel" class="item-group__input" placeholder="Телефон">
+					</label>
+					<button type="submit" class="popup__btn btn btn_red btn_block">Хочу дешевле</button>
+					<div class="popup__note">
+						Оставляя свои контактные данные, вы подтверждаете свое совершеннолетие, соглашаетесь на обработку персональных данных в соответствии с <a href="#">Правовой информацией</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="popup-thanks" id="popup-4">
+		<div class="popup-thanks__title">Спасибо!</div>
+		<div class="popup-thanks__subtitle">Ваша заявка принята!</div>
+	</div>
 	
 	
 	
